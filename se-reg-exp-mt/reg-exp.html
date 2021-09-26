@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <title> Regular Expression Tester </title>
+        <style>
+        .screen{
+        position: fixed;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        }
+        .Prompts{
+            font-size: xx-large;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+        .Button{
+            position: fixed;
+        top: 120%;
+        left:50%;
+        transform: translate(-50%,-50%);
+
+        }
+        </style>
+    </head>
+    <body>
+    <div class="screen">
+    <p class="Prompts"> Enter a Word / Phrase:</p>
+    <input type = "text" id = "text" name = "text"> <br>
+    <p class="Prompts"> Enter its regular expression</p>
+    <input type = "text" id = "expression" name = "expression"><br>
+    <button onclick="ExpressionTest()" class="Button"> Check</button>
+    </div>
+    <p id = "answer"></p>
+
+
+
+    <script>
+       function ExpressionTest(){
+        text = document.getElementById("text").value;
+        expression = document.getElementById("expression").value;
+        var reg_expr = expression.substr(1,expression.length-2);
+        console.log(reg_expr);
+        var regex = new RegExp(reg_expr);
+        console.log(regex.test(text));
+        if(regex.test(text)){
+            document.getElementById("answer").innerHTML= "True"
+        }
+        else{
+            document.getElementById("answer").innerHTML= "False"
+        }
+        }
+
+
+    </script>
+
+    </body>
+   
+</html>

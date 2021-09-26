@@ -1,0 +1,31 @@
+.Title{
+    text-align: center;
+    font-weight: bold;
+    font-size: xx-large;
+    margin-bottom: -10px;
+}
+.SubTitle{
+    margin-top: -10px;
+    text-align: center;
+    margin-bottom: -10px;
+}
+.Header{
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: -10px;
+
+}
+.SubHeader{
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: -10px;
+}
+.Bold{
+    font-weight: bold;
+}
+.Tab{
+    text-indent: 25px;
+}
+.DoubleTab{
+    text-indent :50px
+}
