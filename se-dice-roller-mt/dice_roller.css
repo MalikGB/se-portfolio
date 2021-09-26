@@ -1,0 +1,20 @@
+.WebTitle{
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.Dice{
+    position: fixed;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.button{
+    position: fixed;
+    top: 70%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size: medium;
+
+}
