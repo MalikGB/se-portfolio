@@ -5,33 +5,64 @@
         <style>
         .screen{
         position: fixed;
-        top: 50%;
-        left:50%;
+        top: 40%;
+        left:53%;
         transform: translate(-50%,-50%);
         }
         .Prompts{
+            top: -40%;
             font-size: xx-large;
             font-family: 'Times New Roman', Times, serif;
+            margin-left : -50px;
 
         }
         .Button{
-            position: fixed;
-        top: 120%;
-        left:50%;
+        position: fixed;
+        top: 75%;
+        left:30%;
         transform: translate(-50%,-50%);
+        
+        }
+        .Result{
+        top: -50%;
+        left: -80%;
+        font-size: xx-large;
+        margin-top: 50px;
+        margin-left: 75px;
+        }
+        .Title{
+            font-size: xx-large;
+            text-align: center;
+        }
+        .TopCurve{
+        height: 30px;
+        margin-bottom: -70px;
+        border-style: solid;
+        border-color: #095484;
+        border-width: 1px 0 0 0;
+        border-radius: 20px;
+        padding-bottom: 0px;
+        }
+        .Background{
+        background-color: #90d5ec;
+        background-image: linear-gradient(315deg, #90d5ec 0%, #fc575e 74%);
 
         }
         </style>
     </head>
-    <body>
+    <body class="Background">
+    <p class = "Title">Regular Expression Checker</p>
+    <hr class = TopCurve>
     <div class="screen">
+    
     <p class="Prompts"> Enter a Word / Phrase:</p>
     <input type = "text" id = "text" name = "text"> <br>
-    <p class="Prompts"> Enter its regular expression</p>
+    <p class="Prompts"> Enter the regular expression</p>
     <input type = "text" id = "expression" name = "expression"><br>
     <button onclick="ExpressionTest()" class="Button"> Check</button>
+    <p id = "answer" class="Result">N/A</p>
     </div>
-    <p id = "answer"></p>
+    
 
 
 
@@ -39,10 +70,9 @@
        function ExpressionTest(){
         text = document.getElementById("text").value;
         expression = document.getElementById("expression").value;
-        var reg_expr = expression.substr(1,expression.length-2);
-        console.log(reg_expr);
-        var regex = new RegExp(reg_expr);
-        console.log(regex.test(text));
+        console.log(expression);
+        var regex = new RegExp(expression);
+        console.log(regex);
         if(regex.test(text)){
             document.getElementById("answer").innerHTML= "True"
         }
