@@ -1,7 +1,19 @@
 <!DOCTYPE html>
+<!--
+
+ Author: Malik Tifah
+
+ Class:  Software Engineering
+
+ Project: Lab 2 / Regular Expression Tester
+
+ Description: This is the first version of my Regular expression application and is being submitted as part of Lab 2.
+
+-->
 <html lang = 'en'>
     <head>
         <title> Regular Expression Tester </title>
+        <!--Style sheet-->
         <style>
         .screen{
         position: fixed;
@@ -54,7 +66,7 @@
     <p class = "Title">Regular Expression Checker</p>
     <hr class = TopCurve>
     <div class="screen">
-    
+    <!--Prompts-->
     <p class="Prompts"> Enter a Word / Phrase:</p>
     <input type = "text" id = "text" name = "text"> <br>
     <p class="Prompts"> Enter the regular expression</p>
@@ -65,12 +77,13 @@
     
 
 
-
+    <!--Script-->
     <script>
        function ExpressionTest(){
         text = document.getElementById("text").value;
         expression = document.getElementById("expression").value;
         console.log(expression);
+        //Coverts the inputed string into a regular expression
         var regex = new RegExp(expression);
         console.log(regex);
         if(regex.test(text)){
