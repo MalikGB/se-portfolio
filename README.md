@@ -1,10 +1,6 @@
-##Name
-Malik Tifah
 
-##Email address:
-malikltifah@lewisu.edu
 
-### se-portfolio
+## se-portfolio
 This project is a website that acts as a portfolio of all projects completed in Software engineering.
 Projects included:
 Getting to know me
@@ -12,7 +8,13 @@ Dice-roller
 regex-testing
 
 
-##Credits
+# Name
+Malik Tifah
+
+# Email address:
+malikltifah@lewisu.edu
+
+## Credits
 Dice images used in Dice Roller: https://commons.wikimedia.org/wiki/Category:Dice_faces
 
 ##Execution instructions
